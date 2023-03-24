@@ -12,9 +12,16 @@ return require("packer").startup(function(use)
 
   use({ "folke/tokyonight.nvim", as = "tokyonight" })
 
+  -- explorador de archivos
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+  -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+
 
   -- Resaltado de codigo , para detectar la sintaxis de los lenguages de programacion
-
+  
   use {
     'nvim-treesitter/nvim-treesitter',
     run = function()
@@ -30,21 +37,39 @@ return require("packer").startup(function(use)
     branch = 'v1.x',
     requires = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },           -- Required
-      { 'williamboman/mason.nvim' },         -- Optional
+      { 'neovim/nvim-lspconfig' },             -- Required
+      { 'williamboman/mason.nvim' },           -- Optional
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },       -- Required
-      { 'hrsh7th/cmp-nvim-lsp' },   -- Required
-      { 'hrsh7th/cmp-buffer' },     -- Optional
-      { 'hrsh7th/cmp-path' },       -- Optional
+      { 'hrsh7th/nvim-cmp' },         -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+      { 'hrsh7th/cmp-buffer' },       -- Optional
+      { 'hrsh7th/cmp-path' },         -- Optional
       { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua' },   -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
 
       -- Snippets
-      { 'L3MON4D3/LuaSnip' },           -- Required
+      { 'L3MON4D3/LuaSnip' },             -- Required
       { 'rafamadriz/friendly-snippets' }, -- Optional
     }
+  }
+
+  -- Una línea de estado de Neovim increíblemente rápida y fácil de configurar escrita en Lua.
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+
+  -- Una bonita lista para mostrar diagnósticos, referencias, resultados de telescopios, soluciones rápidas y listas de ubicaciones para ayudarlo a resolver todos los problemas que está causando su código.
+  use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons"
+  }
+  -- alpha es un saludo rápido y totalmente programable para neovim. pantalla de inicio personalizada
+  use {
+    'goolord/alpha-nvim',
+    requires = 'nvim-tree/nvim-web-devicons'
   }
 end)

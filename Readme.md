@@ -1,6 +1,6 @@
 # Configuracion de respaldo de NEOVIM
 
-Contienen toda la configuracion de neovim como un respaldo para intalar en windows y en linux.
+Contienen toda la configuracion de neovim como un respaldo para instalar en windows y en linux.
 
 
 
@@ -55,7 +55,7 @@ Ejecutar Neovim en el modo Ex el comando `:PackerInstall` y despues `:PackerComp
 
 Mas informacion de [Packer](https://github.com/wbthomason/packer.nvim).
 
-### Configuar Mason
+### Configurar Mason
 
 Con el proposito de instalar servidores de lenguage para Neovim usaremos Mason. En neovim modo Ex ejecutamos el comando `:Mason` buscascamos el LSP y autocompletado para el lenguage que desemos (javascript, python, lua,  etc.), recordemos que la letra `i` es para instalar.
 
