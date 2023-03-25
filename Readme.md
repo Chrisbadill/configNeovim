@@ -1,11 +1,18 @@
 # Configuracion de respaldo de NEOVIM
 
-Contienen toda la configuracion de neovim como un respaldo para instalar en windows y en linux.
+Repositorio con configuracion personal de neovim con intrucciones en español para Instalar Neovim en Windows y en linux.
+En esta configuracion se incluye los plugins siguientes:
 
-
+- [Packer.nvim](https://github.com/wbthomason/packer.nvim)
+- [Alpha-nvim](https://github.com/goolord/alpha-nvim)
+- [LuaLine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- [Mason.nvim](https://github.com/williamboman/mason.nvim)
+- [Telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) como explorador de archivos.
+- [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [Toumble.nvim](https://github.com/folke/trouble.nvim)
 
 ## Instalacion en windows
-para esta instalcion se debe usar powershell
+Para esta instalcion se debe usar `PowerShell`, y se deben seguir los pasos siguientes:
 
 1. [Instalar chocolatey](#instalar-chocholatey)
 2. [Instalar Neovim](#instalar-neovim)
@@ -15,7 +22,7 @@ para esta instalcion se debe usar powershell
 
 ### Instalar Chocholatey
 
-Para instalar Chocolatey ejecutamos el sigueinte codigo con `PowerShell` en modo administrador:
+Para instalar Chocolatey ejecutamos el siguinte codigo con `PowerShell` en modo administrador:
 
 ```powershell
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -35,11 +42,7 @@ Mas informacion en [https://neovim.io/](https://neovim.io/).
 
 ## Clonar Configuracion
 
-PENDIENTE
-
-Desde este repositorio extrar la configuracion de neovim para windows
-
-Agregarla el la carpeta del sistema
+Desde este repositorio extrar la configuracion de neovim para windows, es la que se encuentra en la carpeta de este repositorio llamada windows,solo el contenido se de debe copiar en la carpeta del sistema que se encuentra en la siguiente direccion:
 
 ```powershell
 ~\AppData\Local\nvim\
@@ -47,11 +50,13 @@ Agregarla el la carpeta del sistema
 
 ### Instalar Packer.nvim
 
+Para instalar el complemento Packer.nvim debemos clonar su repositorio con el siguiente comando:
+
 ```powershell
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 ```
 
-Ejecutar Neovim en el modo Ex el comando `:PackerInstall` y despues `:PackerCompile` esto pondra a funcionar Packer intalara los packetes incluidos en la configuracion
+Para iniciar Packer debenmos ejecutar en Neovim en el modo Ex el comando `:PackerInstall` y despues `:PackerCompile` esto pondra a funcionar Packer intalara los packetes incluidos en la configuracion.
 
 Mas informacion de [Packer](https://github.com/wbthomason/packer.nvim).
 
