@@ -40,9 +40,9 @@ choco install neovim
 
 Mas informacion en [https://neovim.io/](https://neovim.io/).
 
-## Clonar Configuracion
+### Clonar Configuracion
 
-Desde este repositorio extrar la configuracion de neovim para windows, es la que se encuentra en la carpeta de este repositorio llamada windows,solo el contenido se de debe copiar en la carpeta del sistema que se encuentra en la siguiente direccion:
+Para esto se requiere tener `git` intalado en el sistema. Despues desde este repositorio extrar la configuracion de neovim para windows, es la que se encuentra en la carpeta de este repositorio llamada `windows`,solo el contenido se de debe copiar en la carpeta del sistema que se encuentra en la siguiente direccion:
 
 ```powershell
 ~\AppData\Local\nvim\
@@ -56,12 +56,13 @@ Para instalar el complemento Packer.nvim debemos clonar su repositorio con el si
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 ```
 
-Para iniciar Packer debenmos ejecutar en Neovim en el modo Ex el comando `:PackerInstall` y despues `:PackerCompile` esto pondra a funcionar Packer intalara los packetes incluidos en la configuracion.
+Para iniciar Packer debenmos ejecutar en Neovim en el modo Ex el comando `:PackerInstall` y despues `:PackerCompile` esto pondra a funcionar Packer instalara los packetes incluidos en la configuracion.
 
 Mas informacion de [Packer](https://github.com/wbthomason/packer.nvim).
 
 ### Configurar Mason
 
-Con el proposito de instalar servidores de lenguage para Neovim usaremos Mason. En neovim modo Ex ejecutamos el comando `:Mason` buscascamos el LSP y autocompletado para el lenguage que desemos (javascript, python, lua,  etc.), recordemos que la letra `i` es para instalar.
+Se usa para que Nvim reconosca los lenguages de programacion, requiere que se intalen servidores de leguage LSP para Neovim y esto se intalan con Mason. En neovim modo Ex ejecutamos el comando `:Mason` buscascamos el LSP y autocompletado para el lenguage que desemos (javascript, python, lua,  etc.),e instalamos los que deceemos.
+Recordemos que la letra `i` es para instalar un servidor con Mason.
 
 
